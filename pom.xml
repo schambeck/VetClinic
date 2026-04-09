@@ -9,9 +9,9 @@
         <version>3.4.3</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.VetClinic</groupId>
-    <artifactId>VetClinic</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <groupId>com.vetclinic</groupId>
+    <artifactId>vetclinic</artifactId>
+    <version>1.0.0</version>
     <name>VetClinic</name>
     <description>VetClinic</description>
     <url />
@@ -97,6 +97,9 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <layers>
+                        <enabled>true</enabled>
+                    </layers>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
@@ -104,6 +107,13 @@
                         </exclude>
                     </excludes>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
